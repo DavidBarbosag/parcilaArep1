@@ -50,6 +50,7 @@ public class ReflexiveBackend {
             }
 
             String query = requri.getQuery();
+            System.out.println(query);
             if (query != null) {
                 if (query.contains("add")) {
                     outputLine = appendValue(requri);

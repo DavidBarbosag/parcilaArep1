@@ -26,6 +26,7 @@ public class Facade {
                 sendResponse(out, "text/html", html);
             } else if (line.contains("/")){
                 String option = line.split("/")[1];
+                System.out.println(option);
                 String backendResp = callBackend(option);
                 sendResponse(out, "application/json", backendResp);
             }
