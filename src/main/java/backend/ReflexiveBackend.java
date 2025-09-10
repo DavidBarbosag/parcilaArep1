@@ -52,8 +52,8 @@ public class ReflexiveBackend {
             String query = requri.getQuery();
             System.out.println(query);
             if (query != null) {
-                if (query.contains("add")) {
-                    outputLine = appendValue(requri);
+                if (query.contains("=")) {
+                    outputLine = appendValue(query);
                 } else if (query.contains("list")){
                     outputLine = listValues();
                 } else if (query.contains("clear")){
@@ -79,9 +79,9 @@ public class ReflexiveBackend {
         serverSocket.close();
     }
 
-    public static String appendValue(URI requri){
-        String query = requri.getQuery();
-        String numero = URLDecoder.decode(query.substring(6), StandardCharsets.UTF_8);
+    public static String appendValue(String query){
+
+        String numero = query.substring(2);
         linkedList.add(numero);
         return "{\"status\":\"" + numero + "\"}";
     }

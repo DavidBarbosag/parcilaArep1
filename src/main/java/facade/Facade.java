@@ -80,7 +80,7 @@ public class Facade {
                 "<pre id=\"response\"></pre>\n" +
                 "\n" +
                 "<script>\n" +
-                "    function sendCommand(){\n" +
+                "    function send(){\n" +
                 "        let url = \"/list\"" +
                 "        fetch(url)\n" +
                 "            .then(x => x.text())\n" +
