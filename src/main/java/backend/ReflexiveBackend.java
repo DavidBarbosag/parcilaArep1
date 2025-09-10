@@ -62,7 +62,7 @@ public class ReflexiveBackend {
                     outputLine = stats();
                 }
             } else {
-                outputLine = "Consulta no valida";
+                outputLine = listValues();
             }
 
             out.println("HTTP/1.1 200 OK");
@@ -90,7 +90,6 @@ public class ReflexiveBackend {
         StringBuilder sb = new StringBuilder("{\"values\":[");
         for (String s : linkedList) {
             sb.append("\"").append(s).append("\"");
-
         }
         sb.append("]}");
 

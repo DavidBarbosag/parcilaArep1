@@ -75,16 +75,16 @@ public class Facade {
                 "    }\n" +
                 "</script>\n" +
 
-                "<button onclick=\"sendCommand()\">list</button>\n" +
+                "<button onclick=\"send()\">list</button>\n" +
                 "\n" +
-                "<pre id=\"response\"></pre>\n" +
+                "<pre id=\"responseList\"></pre>\n" +
                 "\n" +
                 "<script>\n" +
                 "    function send(){\n" +
                 "        let url = \"/list\"" +
                 "        fetch(url)\n" +
                 "            .then(x => x.text())\n" +
-                "            .then(y => document.getElementById(\"response\").innerHTML = y);\n" +
+                "            .then(y => document.getElementById(\"responseList\").innerHTML = y);\n" +
                 "    }\n" +
                 "</script>\n" +
 
