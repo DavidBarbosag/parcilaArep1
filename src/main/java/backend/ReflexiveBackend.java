@@ -56,7 +56,7 @@ public class ReflexiveBackend {
                     outputLine = appendValue(query);
                 } else if (query.contains("list")){
                     outputLine = listValues();
-                } else if (query.contains("clear")){
+                } else if (requri.getPath().contains("clear")){
                     outputLine = deleteList();
                 } else if (query.contains("stats")){
                     outputLine = stats();

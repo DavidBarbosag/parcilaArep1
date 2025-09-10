@@ -70,6 +70,10 @@ public class Facade {
                 "\n" +
                 "<pre id=\"responseList\"></pre>\n" +
                 "\n" +
+                "<button onclick=\"clearList()\">clear</button>\n" +
+                "\n" +
+                "<pre id=\"responseClear\"></pre>\n" +
+                "\n" +
                 "<script>\n" +
                 "    function sendCommand(){\n" +
                 "        let url = \"/add?x=\" + document.getElementById(\"num\").value;\n" +
@@ -83,9 +87,19 @@ public class Facade {
                 "            .then(x => x.text())\n" +
                 "            .then(y => document.getElementById(\"responseList\").innerHTML = y);\n" +
                 "    }\n" +
+                "    function clearList(){\n" +
+                "        let url = \"/clear\";\n" +
+                "        fetch(url)\n" +
+                "            .then(x => x.text())\n" +
+                "            .then(y => {\n" +
+                "                document.getElementById(\"responseClear\").innerHTML = y;\n" +
+                "                document.getElementById(\"responseList\").innerHTML = \"\";\n" +
+                "                document.getElementById(\"response\").innerHTML = \"\";\n" +
+                "            });\n" +
+                "    }\n" +
                 "</script>\n" +
                 "\n" +
                 "</body>\n" +
-                "</html>";
+                "</html>\n";
     }
 }
