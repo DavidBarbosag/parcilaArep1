@@ -54,6 +54,7 @@ Listar
 <img width="421" height="234" alt="image" src="https://github.com/user-attachments/assets/a4072b94-4338-4102-b394-0629822f658e" />
 
 Limpiar
+<img width="390" height="190" alt="image" src="https://github.com/user-attachments/assets/c563e939-fbbc-4c15-b168-74989d1f8f20" />
 
 
 
